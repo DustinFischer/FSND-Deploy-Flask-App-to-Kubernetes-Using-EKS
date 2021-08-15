@@ -21,8 +21,8 @@ def client():
     yield client
 
 
-
 def test_health(client):
+    assert False
     response = client.get('/')
     assert response.status_code == 200
     assert response.json == 'Healthy'
